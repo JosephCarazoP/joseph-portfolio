@@ -182,21 +182,21 @@ export const Hero = () => {
             funcionales y escalables.
           </motion.p>
 
-          {/* Información de contacto */}
+          {/* Información de contacto - Responsive */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-8"
           >
             <a
               href={`mailto:${personalInfo.email}`}
               className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 px-4 py-3 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300"
             >
-              <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30 group-hover:scale-110 transition-transform">
-                <Mail className="w-5 h-5 text-blue-400" />
+              <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30 group-hover:scale-110 transition-transform flex-shrink-0">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
               </div>
-              <div className="flex-1 text-left">
+              <div className="flex-1 text-left min-w-0">
                 <p className="text-gray-400 text-xs">Email</p>
-                <p className="text-white text-sm font-medium truncate">{personalInfo.email}</p>
+                <p className="text-white text-xs sm:text-sm font-medium truncate">{personalInfo.email}</p>
               </div>
             </a>
 
@@ -204,94 +204,103 @@ export const Hero = () => {
               href={`tel:${personalInfo.phone}`}
               className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 px-4 py-3 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300"
             >
-              <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30 group-hover:scale-110 transition-transform">
-                <Phone className="w-5 h-5 text-blue-400" />
+              <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30 group-hover:scale-110 transition-transform flex-shrink-0">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
               </div>
-              <div className="flex-1 text-left">
+              <div className="flex-1 text-left min-w-0">
                 <p className="text-gray-400 text-xs">Teléfono</p>
-                <p className="text-white text-sm font-medium">{personalInfo.phone}</p>
+                <p className="text-white text-xs sm:text-sm font-medium">{personalInfo.phone}</p>
               </div>
             </a>
 
-            <div className="flex items-center gap-3 bg-white/5 px-4 py-3 rounded-xl border border-white/10">
-              <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30">
-                <MapPin className="w-5 h-5 text-blue-400" />
+            <div className="sm:col-span-2 lg:col-span-1 flex items-center gap-3 bg-white/5 px-4 py-3 rounded-xl border border-white/10">
+              <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30 flex-shrink-0">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
               </div>
-              <div className="flex-1 text-left">
+              <div className="flex-1 text-left min-w-0">
                 <p className="text-gray-400 text-xs">Ubicación</p>
-                <p className="text-white text-sm font-medium">Costa Rica</p>
+                <p className="text-white text-xs sm:text-sm font-medium">Costa Rica</p>
               </div>
             </div>
           </motion.div>
 
-          {/* CTAs */}
+
+          {/* CTAs - Responsive Optimized */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
           >
+            {/* Botón Principal - Ver Proyectos */}
             <Button
               size="lg"
-              className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-6 text-base font-medium rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 group"
+              className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 group"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Ver Proyectos
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <span>Ver Proyectos</span>
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            {/* NUEVO - Botón de Habilidades */}
+            {/* Botón Secundario - Habilidades */}
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-blue-400/50 text-blue-400 hover:bg-blue-400/10 px-8 py-6 text-base font-medium rounded-xl group"
+              className="w-full sm:w-auto glass-card px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium rounded-xl group hover:border-blue-400/50 transition-all duration-300"
               onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <Code2 className="mr-2 w-5 h-5" />
-              Habilidades
+              <div className="flex items-center justify-center gap-2">
+                <Code2 className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
+                <span className="text-white">Habilidades</span>
+              </div>
             </Button>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-blue-400/50 text-blue-400 hover:bg-blue-400/10 px-8 py-6 text-base font-medium rounded-xl group"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Contactar
-            </Button>
-
-            <div className="relative">
+            {/* Grid para los últimos 2 botones en mobile */}
+            <div className="w-full sm:w-auto flex flex-col sm:flex-row gap-3 sm:gap-4">
+              {/* Contactar */}
               <Button
                 size="lg"
-                className="bg-transparent border-2 border-white/30 text-white hover:bg-white hover:text-black hover:border-white px-8 py-6 text-base font-medium rounded-xl group transition-all duration-300"
-                onClick={() => setShowCVOptions(!showCVOptions)}
+                variant="outline"
+                className="w-full sm:w-auto border-2 border-blue-400/50 text-blue-400 hover:bg-blue-400/10 px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium rounded-xl group"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Download className="mr-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                Descargar CV
+                Contactar
               </Button>
 
-              {showCVOptions && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="absolute top-full mt-2 left-0 w-full bg-black/90 backdrop-blur-xl border-2 border-white/30 rounded-xl overflow-hidden shadow-2xl z-50"
+              {/* Descargar CV */}
+              <div className="relative w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="w-full bg-transparent border-2 border-white/30 text-white hover:bg-white hover:text-black hover:border-white px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium rounded-xl group transition-all duration-300"
+                  onClick={() => setShowCVOptions(!showCVOptions)}
                 >
-                  <button
-                    onClick={() => downloadCV('es')}
-                    className="w-full px-6 py-3 text-left text-white font-medium hover:bg-white/10 transition-colors flex items-center gap-2"
+                  <Download className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-1 transition-transform" />
+                  <span>Descargar CV</span>
+                </Button>
+
+                {showCVOptions && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="absolute top-full mt-2 left-0 w-full bg-black/90 backdrop-blur-xl border-2 border-white/30 rounded-xl overflow-hidden shadow-2xl z-50"
                   >
-                    <FileDown className="w-4 h-4 text-blue-400" />
-                    <span>Español</span>
-                  </button>
-                  <button
-                    onClick={() => downloadCV('en')}
-                    className="w-full px-6 py-3 text-left text-white font-medium hover:bg-white/10 transition-colors flex items-center gap-2 border-t border-white/20"
-                  >
-                    <FileDown className="w-4 h-4 text-blue-400" />
-                    <span>English</span>
-                  </button>
-                </motion.div>
-              )}
+                    <button
+                      onClick={() => downloadCV('es')}
+                      className="w-full px-4 sm:px-6 py-3 text-left text-white text-sm sm:text-base font-medium hover:bg-white/10 transition-colors flex items-center gap-2"
+                    >
+                      <FileDown className="w-4 h-4 text-blue-400" />
+                      <span>Español</span>
+                    </button>
+                    <button
+                      onClick={() => downloadCV('en')}
+                      className="w-full px-4 sm:px-6 py-3 text-left text-white text-sm sm:text-base font-medium hover:bg-white/10 transition-colors flex items-center gap-2 border-t border-white/20"
+                    >
+                      <FileDown className="w-4 h-4 text-blue-400" />
+                      <span>English</span>
+                    </button>
+                  </motion.div>
+                )}
+              </div>
             </div>
           </motion.div>
+
 
 
           {/* Social Links */}
