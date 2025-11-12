@@ -5,6 +5,7 @@ import { Skills } from './components/Skills';
 import { Contact } from './components/Contact';
 import { ScrollIndicator } from './components/ScrollIndicator';
 import { CustomCursor } from './components/CustomCursor';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
     </div>
   );
 }

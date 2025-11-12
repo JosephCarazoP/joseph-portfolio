@@ -5,8 +5,8 @@ export const personalInfo = {
   email: "josephcarazocv@gmail.com",
   phone: "+506 8662 2488",
   summary: "Desarrollador Junior en TI con experiencia en proyectos web/móvil y apoyo logístico. Capacidad de adaptación a diferentes entornos tecnológicos y operativos.",
-  github: "https://github.com/josephcarazo",
-  linkedin: "https://linkedin.com/in/josephcarazo",
+  github: "https://github.com/JosephCarazoP",
+  linkedin: "https://linkedin.com/in/joseph-carazo-388528273",
   instagram: "https://instagram.com/josephcarazo",
 };
 
