@@ -13,32 +13,37 @@ export const personalInfo = {
 
 export const experience = [
   {
-    title: "Desarrollador Full Stack",
+    position: "Desarrollador Full Stack",
     company: "KuarcTech Solutions",
     location: "Remoto",
     period: "Febrero 2025 – Mayo 2025",
-    description: [
-      "Desarrollo de una red social utilizando tecnologías frontend y backend",
-      "Implementación de funcionalidades clave como likes, carga dinámica de contenido",
-      "Trabajo en entorno ágil con control de versiones"
-    ]
+    description: "Desarrollo de una red social utilizando tecnologías frontend y backend modernas, con implementación de funcionalidades interactivas y trabajo en entorno ágil.",
+    achievements: [
+      "Desarrollo de una red social completa con funcionalidades interactivas",
+      "Implementación de sistema de likes y carga dinámica de contenido",
+      "Trabajo en entorno ágil con control de versiones usando Git"
+    ],
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Git", "Agile"]
   },
   {
-    title: "Desarrollador Full Stack",
+    position: "Desarrollador Full Stack",
     company: "Freelancer",
     location: "Remoto",
     period: "Febrero 2022 – Actualidad",
-    description: [
+    description: "Desarrollo de soluciones web y móviles personalizadas para pequeñas empresas, emprendedores y proyectos educativos, con enfoque en experiencia de usuario y funcionalidad.",
+    achievements: [
       "Creación de sitios web personalizados para pequeñas empresas y emprendedores",
-      "Implementación de soluciones móviles para clientes locales",
+      "Desarrollo de soluciones móviles para clientes locales",
       "Colaboración con CINDEA en proyectos de desarrollo web y soporte técnico",
-      "Diseño y desarrollo del sitio web para Plaza Comercial Paseo del Viento",
+      "Diseño y desarrollo completo del sitio web para Plaza Comercial Paseo del Viento",
       "Desarrollo de la plataforma web Aprotila como desarrollador frontend principal",
       "Impartición de clases de programación básica a estudiantes de secundaria en CINDEA",
-      "Negociación directa con clientes para entender sus necesidades y entregar soluciones efectivas"
-    ]
-  },
+      "Negociación directa con clientes para entender necesidades y entregar soluciones efectivas"
+    ],
+    technologies: ["React", "TypeScript", "Firebase", "Flutter", "Tailwind CSS", "Figma", "Git"]
+  }
 ];
+
 
 export const projects = [
   {
