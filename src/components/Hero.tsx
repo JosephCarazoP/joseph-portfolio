@@ -1,6 +1,6 @@
 import { motion, type Variants } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Mail, MapPin, Phone, Github, Linkedin, Instagram, Download, ArrowRight, FileDown } from 'lucide-react';
+import { Mail, MapPin, Phone, Github, Linkedin, Instagram, Download, ArrowRight, FileDown, Code2 } from 'lucide-react';
 
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -238,6 +238,17 @@ export const Hero = () => {
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
+            {/* NUEVO - Botón de Habilidades */}
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-blue-400/50 text-blue-400 hover:bg-blue-400/10 px-8 py-6 text-base font-medium rounded-xl group"
+              onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <Code2 className="mr-2 w-5 h-5" />
+              Habilidades
+            </Button>
+
             <Button
               size="lg"
               variant="outline"
@@ -281,6 +292,7 @@ export const Hero = () => {
               )}
             </div>
           </motion.div>
+
 
           {/* Social Links */}
           <motion.div
